@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>День России — 12 июня</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f9f9f9, #e0f0ff);
+      color: #222;
+    }
+
+    header {
+      background: #d52b1e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 2rem 0;
+      font-weight: bold;
+      color: #d52b1e;
+    }
+
+    .carousel {
+      max-width: 800px;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      height: 450px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .carousel-btn {
+      background: #d52b1e;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .carousel-btn:hover {
+      background: #b2221a;
+    }
+
+    /* Стили для блока с гимном */
+    .anthem-section {
+      text-align: center;
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .anthem-section h2 {
+      color: #d52b1e;
+      margin-top: 0;
+    }
+
+    .anthem-btn {
+      background: #0039a6;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .anthem-btn:hover {
+      background: #002a7d;
+    }
+
+    /* Стили для вращающегося флага */
+    .flag-rotator {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 600px;
+      padding: 1.5rem;
+    }
+
+    .flag-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .rotate-controls {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .rotate-btn {
+      background: #0039a6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .rotate-btn:hover {
+      background: #002a7d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>С Днём России!</h1>
+    <p>12 июня — государственный праздник Российской Федерации</p>
+  </header>
+
+  <div class="intro">
+    <p>День России — один из самых молодых государственных праздников в стране. Он символизирует новую эпоху в истории России, основанную на демократии, свободе и единстве народа.</p>
+  </div>
+
+  <!-- Обратный отсчёт -->
+  <div class="countdown" id="countdown">
+    До Дня России: <span id="days">00</span> дней, <span id="hours">00</span> часов, <span id="minutes">00</span> минут, <span id="seconds">00</span> секунд
+  </div>
+
+  <!-- Карусель -->
+  <div class="carousel">
+    <div class="carousel-inner" id="carousel">
+      <div class="carousel-item" style="background-image: url('https://all-andorra.com/wp-content/uploads/2022/04/Red-Square_how-to-get-to-min.png')"></div>
+      <div class="carousel-item" style="background-image: url('https://cdn.culture.ru/images/f5cf52ee-0354-51fb-8173-421ad4dc856c')"></div>
+      <div class="carousel-item" style="background-image: url('https://vsluh.ru/upload/archive/novosti/obshchestvo/112/kontserty-i-patrioticheskie-fleshmoby-er-pozdravila-zhiteley-regionov-s-dnyem-rossii_407539/images/7jtzvd6wnyjz3562wc6y7a6wsurhabnc.jpg')"></div>
+      <div class="carousel-item" style="background-image: url('https://www.m24.ru/b/d/nAgWUB67nUJkzJ7jP6WL9pn1noXt-dvtg32Qhv2YqzbZJC3PU2mcy3ou4cNb8QfTuNGV_CeILNx_SL-4hSMhMXXfqDgJqgjJnSrxUBPiuy9YKH1Ypyom2ybiaByXQz5QEreaOfg=J2_3YTDEn8HKrx-G4dG0GQ.jpg')"></div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" onclick="prevSlide()">❮</button>
+      <button class="carousel-btn" onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+
+  <!-- Гимн России — ваша ссылка с Кремлёвского сайта -->
+  <div class="anthem-section">
+    <h2>Гимн Российской Федерации</h2>
+    <p>Официальная версия с сайта Кремля — в исполнении хора</p>
+    <button class="anthem-btn" id="play-anthem">▶ Воспроизвести гимн</button>
+    <audio id="russian-anthem" preload="none">
+      <source src="http://www.flag.kremlin.ru/static/pdf/anthem-choir.mp3?5d1208b9e1" type="audio/mpeg">
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+
+  <!-- Вращающийся флаг -->
+  <div class="flag-rotator">
+    <h2>Флаг Российской Федерации</h2>
+    <img id="russian-flag" class="flag-img" src="https://img.freepik.com/premium-photo/elegant-flag-russia_1246656-3983.jpg?semt=ais_hybrid&w=740" alt="Флаг России">
+    <div class="rotate-controls">
+      <button class="rotate-btn" onclick="rotate360()">🔄 Вращать на 360°</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 — Празднуем День России вместе! | 12 июня 2026</p>
+  </footer>
+
+  <script>
+    // === Обратный отсчёт до 12 июня 2026 ===
+    const targetDate = new Date("June 12, 2026 00:00:00").getTime();
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "С Днём России!";
+      }
+    }, 1000);
+
+    // === Карусель ===
+    let currentSlide = 0;
+    const totalSlides = 4;
+
+    function showSlide(index) {
+      if (index >= totalSlides) currentSlide = 0;
+      else if (index < 0) currentSlide = totalSlides - 1;
+      else currentSlide = index;
+      document.getElementById('carousel').style.transform = `translateX(${-currentSlide * 100}%)`;
+    }
+
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
+    setInterval(nextSlide, 5000);
+
+    // === Управление гимном ===
+    const anthemBtn = document.getElementById('play-anthem');
+    const anthemAudio = document.getElementById('russian-anthem');
+
+    anthemBtn.addEventListener('click', () => {
+      if (anthemAudio.paused) {
+        anthemAudio.play().then(() => {
+          anthemBtn.textContent = '⏸ Остановить гимн';
+        }).catch(e => {
+          alert('Воспроизведение заблокировано. Попробуйте нажать ещё раз.');
+        });
+      } else {
+        anthemAudio.pause();
+        anthemBtn.textContent = '▶ Воспроизвести гимн';
+      }
+    });
+
+    anthemAudio.addEventListener('ended', () => {
+      anthemBtn.textContent = '▶ Воспроизвести гимн';
+    });
+
+    // === Вращение флага на 360° ===
+    let rotation = 0;
+    const flagImg = document.getElementById('russian-flag');
+
+    function rotate360() {
+      rotation += 360;
+      flagImg.style.transition = 'transform 2s ease-in-out';
+      flagImg.style.transform = `rotate(${rotation}deg)`;
+      setTimeout(() => {
+        flagImg.style.transition = 'transform 0.3s ease';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
